@@ -8,7 +8,7 @@ function BookingWidget() {
   const [active, setActive] = useState("Tours");
 
   return (
-    <div className="w-full rounded-2xl bg-white p-3 shadow-xl sm:p-4">
+    <div className=" w-full rounded-2xl bg-white p-3 shadow-xl sm:p-4">
       {/* Tabs */}
       <div className="mb-4 overflow-x-auto pb-1">
         <div className="flex min-w-max gap-2">

@@ -1,10 +1,6 @@
-import { createPageMetadata } from "@/metadata";
+import { dealMetadata } from "@/utils/deal-seo";
+import { getDealCategory } from "@/data/deals";
 import FirstClassFlightDeals from "@/site-pages/FirstClassFlightDeals";
 
-export const metadata = createPageMetadata(
-  "First Class Flight Options",
-  "Explore domestic and international first class flight options and review fare availability details with easyfarebooking.",
-  "/first-class-flight-deals",
-);
-
+export const metadata = dealMetadata(getDealCategory("first-class-flights")!);
 export default FirstClassFlightDeals;

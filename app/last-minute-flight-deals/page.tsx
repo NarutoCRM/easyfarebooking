@@ -1,10 +1,6 @@
-import { createPageMetadata } from "@/metadata";
+import { dealMetadata } from "@/utils/deal-seo";
+import { getDealCategory } from "@/data/deals";
 import LastMinuteFlightDeals from "@/site-pages/LastMinuteFlightDeals";
 
-export const metadata = createPageMetadata(
-  "Last-Minute Flight Options",
-  "Explore available last-minute domestic and international flight options and review current itinerary details with easyfarebooking.",
-  "/last-minute-flight-deals",
-);
-
+export const metadata = dealMetadata(getDealCategory("last-minute-flights")!);
 export default LastMinuteFlightDeals;

@@ -28,6 +28,9 @@ function Header() {
           <nav className="hidden items-center gap-7 lg:flex">
             <div className="relative">
               <button
+                type="button"
+                aria-expanded={travel}
+                aria-controls="desktop-travel-menu"
                 onClick={() => setTravel(!travel)}
                 className="text-sm font-semibold text-gray-700 hover:text-primary"
               >
@@ -35,7 +38,7 @@ function Header() {
               </button>
 
               {travel && (
-                <div className="absolute left-0 top-9 w-44 rounded-xl border bg-white p-2 shadow-xl">
+                <div id="desktop-travel-menu" className="absolute left-0 top-9 w-44 rounded-xl border bg-white p-2 shadow-xl">
                   <Link
                     className="block rounded-lg px-4 py-2 hover:bg-light-blue"
                     href="/flights"
@@ -58,7 +61,7 @@ function Header() {
                     className="block rounded-lg px-4 py-2 hover:bg-light-blue"
                     href="/car-rental"
                   >
-                    Car
+                    Car Rental
                   </Link>
                 </div>
               )}
@@ -101,6 +104,10 @@ function Header() {
           </a>
 
           <button
+            type="button"
+            aria-label={menu ? "Close navigation" : "Open navigation"}
+            aria-expanded={menu}
+            aria-controls="mobile-navigation"
             onClick={() => setMenu(!menu)}
             className="rounded-lg bg-light-blue px-3 py-2 text-xl text-primary lg:hidden"
           >
@@ -109,8 +116,12 @@ function Header() {
         </div>
 
         {menu && (
-          <div className="border-t py-4 lg:hidden">
+          <div id="mobile-navigation" className="border-t py-4 lg:hidden">
             <div className="flex flex-col gap-1">
+              <Link onClick={() => setMenu(false)} href="/flights" className="rounded-lg px-4 py-3">Flights</Link>
+              <Link onClick={() => setMenu(false)} href="/hotels" className="rounded-lg px-4 py-3">Hotels</Link>
+              <Link onClick={() => setMenu(false)} href="/cruise" className="rounded-lg px-4 py-3">Cruise</Link>
+              <Link onClick={() => setMenu(false)} href="/car-rental" className="rounded-lg px-4 py-3">Car Rental</Link>
               <Link
                 onClick={() => setMenu(false)}
                 href="/deals"

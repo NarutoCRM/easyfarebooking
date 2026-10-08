@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./index.css";
+import { siteUrl } from "@/metadata";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://easyfarebooking.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "easyfarebooking",
     template: "%s | easyfarebooking",

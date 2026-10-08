@@ -1,10 +1,6 @@
-import { createPageMetadata } from "@/metadata";
+import { dealMetadata } from "@/utils/deal-seo";
+import { getDealCategory } from "@/data/deals";
 import InternationalFlightDeals from "@/site-pages/InternationalFlightDeals";
 
-export const metadata = createPageMetadata(
-  "International Flight Deals",
-  "Explore international flight options, destinations, and fare information for trips around the world with easyfarebooking.",
-  "/international-flight-deals",
-);
-
+export const metadata = dealMetadata(getDealCategory("cheap-international-flights")!);
 export default InternationalFlightDeals;

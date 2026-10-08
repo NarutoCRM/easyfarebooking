@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 const siteName = "easyfare booking";
+export const siteUrl = "https://easyfarebooking.com";
 
 export function createPageMetadata(
   title: string,

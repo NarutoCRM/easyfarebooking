@@ -1,10 +1,5 @@
-import { createPageMetadata } from "@/metadata";
+import { serviceMetadata } from "@/utils/service-seo";
 import Cruise from "@/site-pages/Cruise";
 
-export const metadata = createPageMetadata(
-  "Cruise Travel Planning",
-  "Explore cruise vacation planning information and contact easyfarebooking for travel assistance.",
-  "/cruise",
-);
-
+export const metadata = serviceMetadata("cruise");
 export default Cruise;

@@ -16,7 +16,7 @@ function Hero() {
         "
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(3,18,32,.82), rgba(3,35,55,.58), rgba(3,18,32,.42)), url('/images/hero-travel.jpg')",
+            "linear-gradient(90deg, rgba(3,18,32,.82), rgba(3,35,55,.58), rgba(3,18,32,.42)), url('/images/hero-travel.png')",
         }}
       >
         {/* Decorative Overlay */}
@@ -169,8 +169,10 @@ function Hero() {
               md:w-[calc(100%-32px)]
               md:-translate-x-1/2
             "
-          >
-            <BookingWidget />
+          > 
+            <div className="-mb-35 -ml-4">
+              <BookingWidget />
+            </div>
           </div>
         </div>
       </div>

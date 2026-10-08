@@ -1,10 +1,6 @@
-import { createPageMetadata } from "@/metadata";
+import { dealMetadata, dealsDirectoryMetadata } from "@/utils/deal-seo";
 import Deals from "@/site-pages/Deals";
 
-export const metadata = createPageMetadata(
-  "Featured Flight Deals",
-  "Browse featured domestic and international flight fare listings on easyfarebooking and review the displayed trip details.",
-  "/deals",
-);
+export const metadata = dealMetadata(dealsDirectoryMetadata);
 
 export default Deals;

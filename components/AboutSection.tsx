@@ -13,7 +13,7 @@ function AboutSection() {
             <h2 className="mt-5 text-3xl font-black leading-tight text-dark md:text-4xl lg:text-5xl">
               Your Journey Starts With
               <span className="block text-primary">
-                Easy Flight Booking
+                Easy fare Booking
               </span>
             </h2>
 

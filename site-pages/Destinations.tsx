@@ -1,13 +1,5 @@
-const destinations = [
-  "New York",
-  "Los Angeles",
-  "San Francisco",
-  "Orlando",
-  "London",
-  "Paris",
-  "Tokyo",
-  "Hong Kong",
-];
+import { destinations } from "@/data/destinations";
+import DestinationCard from "@/components/DestinationCard";
 
 function Destinations() {
   return (
@@ -19,28 +11,14 @@ function Destinations() {
             Destinations
           </p>
 
-          <h1 className="mt-2 text-4xl font-black text-primary-dark">
+          <h1 className="mt-2 text-4xl font-black text-dark">
             Explore Popular Destinations
           </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-600">Explore airport options, local highlights and seasonal planning tips before choosing your travel dates.</p>
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {destinations.map((destination) => (
-            <div
-              key={destination}
-              className="group rounded-2xl bg-gradient-to-br from-primary to-primary-dark p-7 text-white shadow-lg transition hover:-translate-y-1"
-            >
-              <div className="text-4xl">✈</div>
-
-              <h2 className="mt-8 text-xl font-black">
-                {destination}
-              </h2>
-
-              <p className="mt-2 text-sm text-blue-100">
-                Explore flights and travel options
-              </p>
-            </div>
-          ))}
+          {destinations.map((destination) => <DestinationCard key={destination.slug} destination={destination} />)}
         </div>
 
       </div>
