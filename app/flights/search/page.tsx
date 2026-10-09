@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import FlightSearchResults from "@/components/FlightSearchResults";
+import FlightSearchResults from "@/components/flight/FlightSearchResults";
 
 export const metadata = {
   title: "Flight search",
@@ -7,5 +7,15 @@ export const metadata = {
 };
 
 export default function FlightSearchPage() {
-  return <Suspense fallback={<div role="status" className="section-padding text-center">Preparing your flight search...</div>}><FlightSearchResults /></Suspense>;
+  return (
+    <Suspense
+      fallback={
+        <div role="status" className="section-padding text-center">
+          Preparing your flight search...
+        </div>
+      }
+    >
+      <FlightSearchResults />
+    </Suspense>
+  );
 }
