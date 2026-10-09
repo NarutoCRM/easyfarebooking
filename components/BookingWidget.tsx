@@ -296,7 +296,7 @@ export default function BookingWidget({ initialValues, defaultDestinationCode, d
       </div>
 
       {/* From + To */}
-      <div className="relative grid gap-3 md:grid-cols-2">
+      <div className="relative mt-4 grid gap-3 md:grid-cols-2">
         <AirportSearch
           label="From"
           value={from}
@@ -357,7 +357,7 @@ export default function BookingWidget({ initialValues, defaultDestinationCode, d
                   setReturnDate("");
                 }
               }}
-              className="w-full bg-transparent text-sm font-semibold text-slate-700 outline-none"
+              className="min-w-0 w-full bg-transparent text-sm font-semibold text-slate-700 outline-none"
             />
           </div>
         </div>
@@ -381,7 +381,7 @@ export default function BookingWidget({ initialValues, defaultDestinationCode, d
                   new Date().toISOString().split("T")[0]
                 }
                 onChange={(e) => setReturnDate(e.target.value)}
-                className="w-full bg-transparent text-sm font-semibold text-slate-700 outline-none"
+                className="min-w-0 w-full bg-transparent text-sm font-semibold text-slate-700 outline-none"
               />
             </div>
           </div>
