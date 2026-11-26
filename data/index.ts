@@ -1,9 +1,9 @@
 const appData = {
   companyName: "EasyFareBooking",
   email: "contact@easyfarebooking.com",
-  phoneNumber: "8553854015",
-  phone: "(855) 385-4015",
-  phoneHref: "tel:+18553854015",
+  phoneNumber: "18334110077",
+  phone: "(833) 411-0077",
+  phoneHref: "tel:+18334110077",
   emailHref: "mailto:contact@easyfarebooking.com",
   address: "261 Griffith Street, Jersey City, NJ 07307, United States",
   serviceMode: "Flight research, itinerary comparison and booking coordination",
